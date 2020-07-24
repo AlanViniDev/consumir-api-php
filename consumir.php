@@ -1,7 +1,7 @@
 <?php
 
 /* url da api */
-$url_api = "http://localhost/API-REST/api/v1/estoque/mostrar";
+$url_api = "";
 
 /* inicia a api */
 $iniciar = curl_init($url_api);
@@ -17,7 +17,7 @@ $acessa = json_decode(curl_exec($iniciar));
 
 /* lista os dados */
 foreach($acessa->dados as $coluna) {
-    //var_dump($coluna);
-    echo $coluna->produto;
+   /*especifique a coluna seguida do operador -> para se rerenciar ao campo */
+    echo '$coluna' . '->' . 'campo';
 }
 
